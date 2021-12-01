@@ -2,17 +2,19 @@ import React from 'react';
 
 import './Editor.css';
 
-export default function Editor() {
+export default function Editor({ title, setTitle }) {
   return (
     <div className="editor">
       <div className="form-control">
         <input name="title" type="text" />
         <label htmlFor="title">Title</label>
       </div>
+
       <div className="form-control">
         <input type="text" />
         <label>Subtitle</label>
       </div>
+
       <div className="form-control">
         <select>
           <option value="architect">{"Architect's Daughter"}</option>
@@ -26,6 +28,7 @@ export default function Editor() {
         </select>
         <label>Font</label>
       </div>
+
       <div className="form-control">
         <label>Alignment</label>
         <div className="radio-group">
@@ -43,6 +46,7 @@ export default function Editor() {
           </label>
         </div>
       </div>
+
       <div className="form-control">
         <textarea style={{ height: '250px' }} />
         <label>Text</label>
